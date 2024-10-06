@@ -58,4 +58,14 @@ function calculateEmployeeSalary(employee){
 department.employees.forEach(employee => calculateEmployeeSalary(employee));
 return totalSalary;
   }
+
+  // Task 3: Create a Function to Calculate the Total Salary for All Departments
+  function calculateCompanySalary(company) {
+    let companyTotalSalary = 0;
+
+    company.departments.forEach(department => {
+        companyTotalSalary += calculateDepartmentSalary(department);
+    });
+    return companyTotalSalary;
+  }
   
